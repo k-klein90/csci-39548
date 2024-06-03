@@ -1,0 +1,22 @@
+html {
+    background: url('https://wallup.net/wp-content/uploads/2015/12/253019-digital_art-minimalism-nature-hill-mountain-moon-stars-night-artwork-landscape-simple.jpg');
+    background-size: cover;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: white;
+    padding: 0px 30px 30px 30px;
+}
+
+h1 {
+    text-align: center;
+}
+
+ul li {
+    padding: 0px 0px 15px 0px;
+}
+
+a {
+    color: red;
+}

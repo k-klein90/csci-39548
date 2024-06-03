@@ -1,0 +1,17 @@
+html {
+    background: url('https://www.wallpaperflare.com/static/411/21/318/gradient-mountains-digital-art-monochrome-wallpaper.jpg');
+    background-size: cover;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    padding: 0px 30px 30px 30px;
+}
+
+h1 {
+    text-align: center;
+}
+
+a {
+    color: forestgreen;
+}

@@ -1,0 +1,17 @@
+html {
+    background: url('https://mir-s3-cdn-cf.behance.net/project_modules/1400/2ba77863600741.5ab5be5be7868.png');
+    background-size: cover;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    padding: 0px 30px 30px 30px;
+}
+
+h1 {
+    text-align: center;
+}
+
+a {
+    color: #1a8cff;
+}
