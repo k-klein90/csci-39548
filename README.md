@@ -1,3 +1,4 @@
 # csci-39548
 Web development course assignments<br/>
-https://github.com/k-klein90/csci-39548
+<br/>
+Homework 1: https://k-klein90.github.io/csci-39548/hw1/index.html
