@@ -1,0 +1,27 @@
+html {
+    background: url('https://img.kwcdn.com/product/open/2023-10-18/1697596097532-352a77250edc4c4e90b9f634a9baf30c-goods.jpeg?imageView2/2/w/800/q/70/format/webp');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 60%;
+    background-position: 80% -10%;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    padding: 0px 30px 30px 30px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.button {
+    background-color: #b37700;
+    display: inline-block;
+    border-radius: 5px;
+    padding: 6px 12px;
+}
+
+a {
+    color: deepskyblue;
+}

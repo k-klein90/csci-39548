@@ -7,7 +7,7 @@ let listOfCats = document.getElementById("listOfCats");
 let addCatButton = document.getElementById("addCatButton");
 let remCatButton = document.getElementById("remCatButton");
 
-//adds a random cat entry to the list
+//adds a random cat entry to the list and removes it from the cats array
 addCatButton.onclick = function(){
     if (cats.length > 0) {
         let i = Math.floor(Math.random() * cats.length);
@@ -19,7 +19,7 @@ addCatButton.onclick = function(){
     }
 }
 
-//removes a random cat entry from the list
+//removes a random cat entry from the list and adds it back to the cats array
 remCatButton.onclick = function(){
     if (listOfCats.hasChildNodes()) {
         let i = Math.floor(Math.random() * listOfCats.children.length);
