@@ -16,6 +16,8 @@ addCatButton.onclick = function(){
         li.appendChild(liText);
         listOfCats.appendChild(li);
         cats.splice(i, 1);
+    } else {
+        alert("There are no more cats to add.");
     }
 }
 
@@ -26,5 +28,7 @@ remCatButton.onclick = function(){
         let li = listOfCats.children[i];
         cats.push(li.innerHTML);
         listOfCats.removeChild(li);
+    } else {
+        alert("There are no more cats to remove.");
     }
 }

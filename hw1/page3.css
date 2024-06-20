@@ -15,11 +15,11 @@ h1 {
     text-align: center;
 }
 
-.button {
+button {
     background-color: #b37700;
-    display: inline-block;
     border-radius: 5px;
     padding: 6px 12px;
+    font-size: 16px;
 }
 
 a {
