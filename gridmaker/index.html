@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Grid</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <h1>Make your own grid!</h1>
+    <button onclick="addRow()">Add row</button>
+    <button onclick="addCol()">Add column</button>
+    <button onclick="remRow()">Remove row</button>
+    <button onclick="remCol()">Remove column</button>
+    <button onclick="fillU()">Fill all uncolored cells</button>
+    <button onclick="fill()">Fill all cells</button>
+    <button onclick="clearAll()">Clear grid</button>
+    <select onchange="selected()" id="selectedID">
+        <option value="SELECT">SELECT</option>
+        <option value="Red">Red</option>
+        <option value="Blue">Blue</option>
+        <option value="Green">Green</option>
+        <option value="Yellow">Yellow</option>
+    </select>
+    <table id="grid">
+    </table>
+    <script src="script.js"></script>
+</body>
+
+</html>
