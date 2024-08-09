@@ -5,6 +5,8 @@ export function employeesReducer(state = initialState, action) {
     switch (action.type) {
       case 'employees/employeesLoaded':
         return action.payload;
+      case 'employees/employeeDeleted':
+        return state.filter(user => user.id!==action.payload);
       default:
         return state;
     }
@@ -25,3 +27,12 @@ export const fetchEmployees = () => async (dispatch) => {
   }
 };
 
+export const deleteEmployee = userId => async dispatch => {
+  try {
+    await axios.delete(`${PATH}/${userId}`);
+    //if delete successful, change state with dispatch
+    dispatch({type: 'employees/employeeDeleted', payload: userId});
+  } catch(err) {
+    console.error(err);
+  }
+};
