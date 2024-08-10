@@ -8,6 +8,6 @@ console.log('Opening database connection');
 export const db = new Sequelize(dbName, dbUser, dbPwd, {
   host: 'localhost',
   dialect: 'postgres',
-  port: 5432,
+  port: 5173,
 });
 

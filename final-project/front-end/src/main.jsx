@@ -5,6 +5,7 @@ import App from './App.jsx';
 import AllEmployeesContainer from './components/containers/AllEmployeesContainer.jsx';
 import AllTasksContainer from './components/containers/AllTasksContainer.jsx';
 import SingleTaskContainer from './components/containers/SingleTaskContainer.jsx';
+import SingleEmployeeContainer from './components/containers/SingleEmployeeContainer.jsx';
 
 import './index.css';
 
@@ -30,6 +31,10 @@ const router = createBrowserRouter([
     path: "/tasks/:taskId",
     element: <SingleTaskContainer />,
   },
+  {
+    path: "/employees/:employeeId",
+    element: <SingleEmployeeContainer />,
+  }
 ]);
 
 //Redux

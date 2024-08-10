@@ -16,7 +16,7 @@ let liStyle = {
 let liStyleLastChild = {
   ...liStyle,
   borderBottom: "none",
-};g
+};
 
 import { Link } from "react-router-dom";
 
@@ -26,7 +26,7 @@ function AllTasksView({tasks, deleteTask}) {
     return (
       <>
         <Link to={`/`}><button>Back to Home</button></Link>
-        <div>There are ngit so tasks.</div>
+        <div>There are no tasks.</div>
       </>
     );
   }
