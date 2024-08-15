@@ -4,15 +4,15 @@ import { useSelector } from "react-redux";
 import SingleEmployeeView from '../views/SingleEmployeeView';
 
 function SingleEmployeeContainer() {
-  let { userId } = useParams(); //get id from URL
-  userId = parseInt(userId); //convert to integer
+  let { employeeId } = useParams(); //get id from URL
+  employeeId = parseInt(employeeId); //convert to integer
 
   //get task from state based on URL parameter
-  const user = useSelector(state =>
-    state.employees.find(user => user.id === userId)
+  const employee = useSelector(state =>
+    state.employees.find(employee => employee.id === employeeId)
   );
 
-  return <SingleEmployeeView user={user}/>
+  return <SingleEmployeeView employee={employee}/>
 }
 
 export default SingleEmployeeContainer;

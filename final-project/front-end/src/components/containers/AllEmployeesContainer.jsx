@@ -7,7 +7,7 @@ function AllEmployeesContainer() {
     const employees = useSelector((state) => state.employees);
     const dispatch = useDispatch();
 
-    const deleteDispatch = (userId) => dispatch(deleteEmployee(userId));
+    const deleteDispatch = (employeeId) => dispatch(deleteEmployee(employeeId));
 
     useEffect(() => {
         dispatch(fetchEmployees());

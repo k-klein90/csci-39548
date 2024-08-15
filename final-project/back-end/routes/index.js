@@ -10,4 +10,3 @@ router.use("/employees", employeeRouter);
 export {
     router as apiRouter,
 };
-

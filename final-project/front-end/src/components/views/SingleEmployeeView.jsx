@@ -1,5 +1,5 @@
-function SingleEmployeeView({user}) {
-    if (!user) {
+function SingleEmployeeView({employee}) {
+    if (!employee) {
         return (
           <section>
             <h2>Employee not found!</h2>
@@ -9,8 +9,8 @@ function SingleEmployeeView({user}) {
     
       return (
         <section>
-          <article className="user">
-            <h2>{user.id}</h2>
+          <article className="employee">
+            <h2>{employee.id}</h2>
             {/*<p className="task-title">{task.content}</p>*/}
           </article>
         </section>
