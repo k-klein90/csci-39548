@@ -8,6 +8,8 @@ import NewEmployeeContainer from './components/containers/NewEmployeeContainer.j
 import AllTasksContainer from './components/containers/AllTasksContainer.jsx';
 import SingleTaskContainer from './components/containers/SingleTaskContainer.jsx';
 import NewTaskContainer from './components/containers/NewTaskContainer.jsx';
+import EditTaskContainer from './components/containers/EditTaskContainer.jsx';
+import EditEmployeeContainer from './components/containers/EditEmployeeContainer.jsx';
 
 import './index.css';
 
@@ -34,6 +36,10 @@ const router = createBrowserRouter([
     element: <NewEmployeeContainer />,
   },
   {
+    path: "/employees/:employeeId/edit",
+    element: <EditEmployeeContainer />,
+  },
+  {
     path: "/tasks",
     element: <AllTasksContainer />,
   },
@@ -44,6 +50,10 @@ const router = createBrowserRouter([
   {
     path: "/tasks/new",
     element: <NewTaskContainer />,
+  },
+  {
+    path: "/tasks/:taskId/edit",
+    element: <EditTaskContainer />,
   }
 ]);
 
