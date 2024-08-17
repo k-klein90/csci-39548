@@ -2,6 +2,7 @@
 const initialState = [];
 
 export function tasksReducer(state = initialState, action) {
+  console.log("Task action type: " + action.type);
     switch (action.type) {
       case 'tasks/tasksLoaded':
         return action.payload;
@@ -16,7 +17,7 @@ export function tasksReducer(state = initialState, action) {
       default:
         return state;
     }
-};
+}
 
 //API calls go here
 import axios from "axios";

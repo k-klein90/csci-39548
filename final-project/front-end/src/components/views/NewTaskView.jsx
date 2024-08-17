@@ -20,8 +20,7 @@ function NewTaskView({ handleSubmit, employees }) {
         <select name="employeeId" defaultValue="null">
           <option value="null">None</option>
           {employees.map(emp => {
-            let name = emp.firstname + " " + emp.lastname;
-            return <option key={emp.id} value={emp.id}>{name}</option>;
+            return <option key={emp.id} value={emp.id}>{emp.firstname} {emp.lastname}</option>;
           })}
         </select>
       </label>
@@ -39,7 +38,7 @@ function NewTaskView({ handleSubmit, employees }) {
             <button>Save Task</button>
           </form>
           <br/>
-          <Link to={`/tasks`}><button style={{margin: "8px"}}>Back to All Tasks</button></Link>
+          <Link to={`/tasks`}><button>Back to All Tasks</button></Link>
         </section>
       )
 

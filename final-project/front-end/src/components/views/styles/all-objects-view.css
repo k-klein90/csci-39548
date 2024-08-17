@@ -3,6 +3,10 @@
 	background-size: 400% 400%;
 	animation: gradient 15s ease infinite;
 	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	padding: 8px;
+	min-width: 500px;
 }
 
 @keyframes gradient {
@@ -15,4 +19,28 @@
 	100% {
 		background-position: 0% 50%;
 	}
+}
+
+#ulStyle {
+	width: 70%;
+	margin: 0 auto;
+	overflow: auto;
+}
+
+#liStyle {
+	padding: 8px 16px;
+	border: 3px solid #000000;
+	background-color: #7fd5c1;
+}
+
+#liStyleLastChild {
+	border-bottom: none;
+}
+
+button {
+	margin: 8px;
+}
+
+h4 {
+	color: #000000;
 }

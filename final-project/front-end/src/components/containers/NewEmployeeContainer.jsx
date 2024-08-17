@@ -8,9 +8,9 @@ function NewEmployeeContainer() {
     const employees = useSelector((state) => state.employees);
     const dispatch = useDispatch();
 
-    useEffect(() => {
-        dispatch(fetchEmployees());
-      }, [dispatch]);
+    // useEffect(() => {
+    //     dispatch(fetchEmployees());
+    //   }, [dispatch]);
 
     const handleSubmit = (e) => {
         // Prevent server submission

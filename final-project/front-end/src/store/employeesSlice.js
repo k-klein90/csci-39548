@@ -2,21 +2,22 @@
 const initialState = [];
 
 export function employeesReducer(state = initialState, action) {
-    switch (action.type) {
-      case 'employees/employeesLoaded':
-        return action.payload;
-      case 'employees/employeeDeleted':
-        return state.filter(employee => employee.id!==action.payload);
-      case 'employees/employeeCreated':
-        return [...state, action.payload];
-      case 'employees/employeeUpdated':
-        return state.map(employee =>
-          employee.id===action.payload.id ? action.payload : employee
-        );
-      default:
-        return state;
-    }
-};
+  console.log("Employee action type: " + action.type);
+  switch (action.type) {
+    case 'employees/employeesLoaded':
+      return action.payload;
+    case 'employees/employeeDeleted':
+      return state.filter(employee => employee.id!==action.payload);
+    case 'employees/employeeCreated':
+      return [...state, action.payload];
+    case 'employees/employeeUpdated':
+      return state.map(employee =>
+        employee.id===action.payload.id ? action.payload : employee
+      );
+    default:
+      return state;
+  }
+}
 
 //API calls go here
 import axios from "axios";

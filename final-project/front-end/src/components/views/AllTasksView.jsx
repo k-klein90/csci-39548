@@ -1,24 +1,7 @@
-import './styles/all-tasks.css';
-
-let ulStyle = {
-  border: "3px solid #0d0",
-  width: "70%",
-  margin: "0 auto",
-  overflow: "auto",
-};
-
-let liStyle = {
-  padding: "8px 16px",
-  borderBottom: "3px solid #0d0",
-  backgroundColor: "#e5f0e1",
-};
-
-let liStyleLastChild = {
-  ...liStyle,
-  borderBottom: "none",
-};
+import './styles/all-objects-view.css';
 
 import { Link } from "react-router-dom";
+import {useSelector} from "react-redux";
 
 function AllTasksView({tasks, deleteTask}) {
 
@@ -32,18 +15,31 @@ function AllTasksView({tasks, deleteTask}) {
     );
   }
   return (
-    <div id="bgview" style={{display: "flex", flexDirection: "column", padding: "8px", minWidth: "500px"}} >
-      <Link to={`/`}><button style={{margin: "8px"}}>Back to Home</button></Link>
-      <Link to={`/tasks/new`}><button style={{margin: "8px"}}>Add Task</button></Link>
-      <div style={ulStyle}>
-        {tasks.map((todo, idx) => {
-          let styleBool = idx === tasks.length - 1 ? liStyleLastChild : liStyle;
+    <div id="bgview">
+      <Link to={`/`}><button>Back to Home</button></Link>
+      <Link to={`/tasks/new`}><button>Add Task</button></Link>
+      <div id="ulStyle">
+        {tasks.map((task, idx) => {
+          let priorities = ["Low", "Medium", "High"];
+
+          let employeeName;
+          if (task.employee){
+            let employee = useSelector(state =>
+              state.employees.find(employee => employee.id === task.employeeId)
+            );
+            employeeName = <Link to={`../employees/${task.employeeId}`}>{employee.firstname} {employee.lastname}</Link>
+          } else {
+            employeeName = "None";
+          }
+
           return (
-            <div key={todo.id} style={styleBool}>
-              <h4>Task #{idx+1}: <Link to={`/tasks/${todo.id}`}>{todo.content}</Link></h4>
-              <h5>Assigned to: Employee {todo.employeeId}</h5>
-              <h5>{todo.completed ? "COMPLETED" : "IN PROGRESS"}</h5>
-              <button onClick={() => deleteTask(todo.id)}>Delete</button>
+            <div key={task.id} id="liStyle">
+              <h3>Task #{idx+1}: <Link to={`/tasks/${task.id}`}>{task.content}</Link></h3>
+              <h4>Assigned to: {employeeName}</h4>
+              <h4>Priority level: {priorities[task.priority-1]}</h4>
+              <h4>Status: {task.completed ? "Completed" : "In Progress"}</h4>
+              <Link to={`/tasks/${task.id}/edit`}><button>Edit</button></Link>
+              <button onClick={() => deleteTask(task.id)}>Delete</button>
             </div>
           );
         })}

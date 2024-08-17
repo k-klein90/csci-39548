@@ -1,9 +1,14 @@
+import {Link} from "react-router-dom";
+
 function SingleEmployeeView({employee}) {
     if (!employee) {
         return (
-          <section>
-            <h2>Employee not found!</h2>
-          </section>
+          <div>
+            <Link to="../employees">Back to all employees</Link>
+            <section>
+              <h2>Employee not found!</h2>
+            </section>
+          </div>
         );
       }
     
