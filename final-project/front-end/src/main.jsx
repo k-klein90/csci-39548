@@ -3,8 +3,13 @@ import ReactDOM from 'react-dom/client';
 
 import App from './App.jsx';
 import AllEmployeesContainer from './components/containers/AllEmployeesContainer.jsx';
+import SingleEmployeeContainer from './components/containers/SingleEmployeeContainer.jsx';
+import NewEmployeeContainer from './components/containers/NewEmployeeContainer.jsx';
+import EditEmployeeContainer from './components/containers/EditEmployeeContainer.jsx';
 import AllTasksContainer from './components/containers/AllTasksContainer.jsx';
 import SingleTaskContainer from './components/containers/SingleTaskContainer.jsx';
+import NewTaskContainer from './components/containers/NewTaskContainer.jsx';
+import EditTaskContainer from './components/containers/EditTaskContainer.jsx';
 
 import './index.css';
 
@@ -23,6 +28,18 @@ const router = createBrowserRouter([
     element: <AllEmployeesContainer />,
   },
   {
+    path: "/employees/:employeeId",
+    element: <SingleEmployeeContainer />,
+  },
+  {
+    path: "/employees/new",
+    element: <NewEmployeeContainer />,
+  },
+  {
+    path: "/employees/:employeeId/edit",
+    element: <EditEmployeeContainer />,
+  },
+  {
     path: "/tasks",
     element: <AllTasksContainer />,
   },
@@ -30,6 +47,14 @@ const router = createBrowserRouter([
     path: "/tasks/:taskId",
     element: <SingleTaskContainer />,
   },
+  {
+    path: "/tasks/new",
+    element: <NewTaskContainer />,
+  },
+  {
+    path: "/tasks/:taskId/edit",
+    element: <EditTaskContainer />,
+  }
 ]);
 
 //Redux

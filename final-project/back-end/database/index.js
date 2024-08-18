@@ -10,4 +10,3 @@ export const db = new Sequelize(dbName, dbUser, dbPwd, {
   dialect: 'postgres',
   port: 5432,
 });
-

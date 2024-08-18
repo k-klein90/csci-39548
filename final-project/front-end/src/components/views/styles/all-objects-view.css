@@ -1,0 +1,46 @@
+#bgview {
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	padding: 8px;
+	min-width: 500px;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+#ulStyle {
+	width: 70%;
+	margin: 0 auto;
+	overflow: auto;
+}
+
+#liStyle {
+	padding: 8px 16px;
+	border: 3px solid #000000;
+	background-color: #7fd5c1;
+}
+
+#liStyleLastChild {
+	border-bottom: none;
+}
+
+button {
+	margin: 8px;
+}
+
+h4 {
+	color: #000000;
+}
