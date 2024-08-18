@@ -2,7 +2,7 @@ import './styles/all-objects-view.css';
 
 import { Link } from "react-router-dom";
 
-function AllEmployeesView({employees, editEmployee, deleteEmployee}) {
+function AllEmployeesView({employees, deleteEmployee}) {
 
   if (!employees.length) {
     return (
@@ -13,6 +13,7 @@ function AllEmployeesView({employees, editEmployee, deleteEmployee}) {
       </>
     );
   }
+
   return (
     <div id="bgview">
       <Link to={`/`}><button>Back to Home</button></Link>
@@ -27,9 +28,9 @@ function AllEmployeesView({employees, editEmployee, deleteEmployee}) {
             </div>
           );
         })}
+      </div>
     </div>
-</div>
-);
+  );
 
 }
 

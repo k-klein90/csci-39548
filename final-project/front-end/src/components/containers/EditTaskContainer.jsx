@@ -1,6 +1,6 @@
 import { useParams } from 'react-router-dom';
 import { useSelector, useDispatch } from "react-redux";
-import { fetchTasks, editTask } from '../../store/tasksSlice';
+import { editTask } from '../../store/tasksSlice';
 import { fetchEmployees } from '../../store/employeesSlice';
 import { useEffect } from 'react';
 
@@ -37,7 +37,7 @@ function EditTaskContainer() {
       ...task,
       content: formJson.taskContent,
       priority: parseInt(formJson.taskPriority),
-      completed: formJson.completed==="true" ? true : false,
+      completed: formJson.completed === "true",
       employeeId: JSON.parse(formJson.employeeId)
     };
 

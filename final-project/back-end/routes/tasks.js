@@ -42,5 +42,5 @@ router.put("/:id", async (req, res, next) => {
 });
 
 export {
-    router as taskRouter,
+  router as taskRouter,
 };

@@ -1,7 +1,6 @@
 import { useParams } from 'react-router-dom';
 import { useSelector, useDispatch } from "react-redux";
-import { fetchEmployees, editEmployee } from '../../store/employeesSlice';
-import { useEffect } from 'react';
+import { editEmployee } from '../../store/employeesSlice';
 import EditEmployeeView from  '../views/EditEmployeeView';
 
 function EditEmployeeContainer() {
@@ -10,16 +9,10 @@ function EditEmployeeContainer() {
 
   const dispatch = useDispatch();
 
-  // useEffect(() => {
-  //   dispatch(fetchEmployees());
-  // }, [dispatch]);
-
   //get employee from state based on URL parameter
   const employee = useSelector(state =>
     state.employees.find(employee => employee.id === employeeId)
   );
-  //get employees for dropdown
-  const employees = useSelector((state) => state.employees);
 
   const handleSubmit = (e) => {
     // Prevent server submission
@@ -44,7 +37,7 @@ function EditEmployeeContainer() {
 
   }
 
-  return <EditEmployeeView employee={employee} /*employees={employees}*/ handleSubmit={handleSubmit}/>
+  return <EditEmployeeView employee={employee} handleSubmit={handleSubmit}/>
 }
 
 export default EditEmployeeContainer;

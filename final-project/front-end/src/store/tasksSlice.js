@@ -2,21 +2,20 @@
 const initialState = [];
 
 export function tasksReducer(state = initialState, action) {
-  console.log("Task action type: " + action.type);
-    switch (action.type) {
-      case 'tasks/tasksLoaded':
-        return action.payload;
-      case 'tasks/taskDeleted':
-        return state.filter(task => task.id!==action.payload);
-      case 'tasks/taskCreated':
-        return [...state, action.payload];
-      case 'tasks/taskUpdated':
-        return state.map(task =>
-          task.id===action.payload.id ? action.payload : task
-        );
-      default:
-        return state;
-    }
+  switch (action.type) {
+    case 'tasks/tasksLoaded':
+      return action.payload;
+    case 'tasks/taskDeleted':
+      return state.filter(task => task.id!==action.payload);
+    case 'tasks/taskCreated':
+      return [...state, action.payload];
+    case 'tasks/taskUpdated':
+      return state.map(task =>
+        task.id===action.payload.id ? action.payload : task
+      );
+    default:
+      return state;
+  }
 }
 
 //API calls go here

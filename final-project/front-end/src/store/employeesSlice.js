@@ -2,7 +2,6 @@
 const initialState = [];
 
 export function employeesReducer(state = initialState, action) {
-  console.log("Employee action type: " + action.type);
   switch (action.type) {
     case 'employees/employeesLoaded':
       return action.payload;

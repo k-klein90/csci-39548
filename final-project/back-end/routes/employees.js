@@ -6,7 +6,7 @@ const router = express.Router();
 
 //define routes
 
-/** GET ALL EMPLOYEES: */
+/***** GET ALL EMPLOYEES: *****/
 router.get('/', async (req, res, next) => {
   try {
     let employees = await Employee.findAll({include: [Task]});
@@ -42,5 +42,5 @@ router.put("/:id", async (req, res, next) => {
 });
 
 export {
-    router as employeeRouter,
+  router as employeeRouter,
 };
