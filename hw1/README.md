@@ -1,0 +1,1 @@
+This assignment is a simple website with static and dynamic pages. It is for practice with HTML, CSS, JavaScript, and the DOM API. Use of Git and feature branch workflow is required during development.
